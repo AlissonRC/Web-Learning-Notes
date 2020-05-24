@@ -1,7 +1,7 @@
 let valor //não inicializada
 console.log(valor)
 
-valor = null
+valor = null //ausência de valor
 console.log(valor)
 
 const prod1 = {}

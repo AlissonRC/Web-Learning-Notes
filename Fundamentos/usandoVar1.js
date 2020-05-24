@@ -1,3 +1,4 @@
+//Var pode ser visível fora do bloco
 {
     {
         {
@@ -7,6 +8,7 @@
 }
 console.log(sera)
 
+//Var em função apenas dentro do escopo
 function teste (){
     var local = 123
     console.log(local)

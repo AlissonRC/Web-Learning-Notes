@@ -24,6 +24,8 @@ console.log(!!NaN)
 console.log(!!undefined)
 console.log(!!(isAtivo = false))
 
+
+//Retorna apenas o valor verdadeiro
 let nome = ''
 console.log(nome || "vazio")
 nome = 'Alisson'

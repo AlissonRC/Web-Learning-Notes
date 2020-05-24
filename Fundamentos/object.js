@@ -1,7 +1,7 @@
-const prod1 = {}
+const prod1 = {} // instanciar objeto
 prod1.nome = 'Celular'
 prod1.preco = 5000
-prod1['Desconto'] = 0.40 // evitar essa notação
+prod1['Desconto de preço'] = 0.40 // evitar atributos com espaço
 console.log(prod1)
 
 const prod2 = {

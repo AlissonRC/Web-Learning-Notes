@@ -17,3 +17,6 @@ console.log(subtracao(1, 1))
 
 const imprimir2 = a => console.log(a)
 imprimir2('Teste')
+
+const imprir = (string) => console.log(string)
+imprimir("Alo Alo")

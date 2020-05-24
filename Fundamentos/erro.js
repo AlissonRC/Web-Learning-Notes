@@ -1,6 +1,8 @@
 function tratarErroELancar(erro){
     throw new Error('...')
 }
+
+
 function imprimir(obg) {
     try {
         console.log(obj.name.toUpperCase() + '!!!')
