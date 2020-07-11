@@ -1,0 +1,60 @@
+<span folder> Unisinos notas </span>
+
+<ul class="tree">
+  <li>
+    <span folder> Turma A </span>
+    <ul>
+      <ul>
+        <li>
+          <span folder> Alunos </span>
+          <ul>
+            <li>
+              <span folder> Notas </span>
+              <ul>
+                <li>Aluno 1</li>
+                <li>Aluno 2</li>
+                <li>Aluno 3</li>
+                <li>Aluno 4</li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </ul>
+  </li>
+  <li>
+    <span folder> Turma B </span>
+    <ul>
+      <ul>
+        <li>
+          <span folder> Alunos </span>
+          <ul>
+            <li>
+              <span folder> Notas </span>
+              <ul>
+                <li>Aluno 1</li>
+                <li>Aluno 2</li>
+                <li>Aluno 3</li>
+                <li>Aluno 4</li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </ul>
+  </li>
+</ul>
+
+<link rel="stylesheet" href="http://files.cod3r.com.br/curso-web/tree.css" />
+<script>
+  var a = document.querySelectorAll("[folder]");
+  a.forEach((folder) => {
+    folder.onclick = function (e) {
+      const ul = folder.nextElementSibling;
+      if (ul.style.display === "none") {
+        ul.style.display = "block";
+      } else ul.style.display = "none";
+      console.log(ul.style.display);
+    };
+  });
+</script>

@@ -2,9 +2,10 @@
   "name": "funcionarios",
   "version": "1.0.0",
   "description": "teste",
-  "main": "index.js",
+  "main": "funcionarios.js",
   "scripts": {
-    "test": "test"
+    "start": "nodemon",
+    "dev": "nodemon"
   },
   "author": "",
   "license": "ISC",
