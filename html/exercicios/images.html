@@ -1,0 +1,96 @@
+<div wm-slider>
+  <p>
+    <img
+      src="http://files.cod3r.com.br/curso-web/imagem1.jpg"
+      alt="Imagem01"
+      width="513"
+      height="342"
+      title="Imagem"
+    />
+  </p>
+  <p>
+    <img
+      src="http://files.cod3r.com.br/curso-web/imagem2.gif"
+      alt="Gif01"
+      title="Gif"
+    />
+  </p>
+
+  <p class="circular">
+    <img src="http://files.cod3r.com.br/curso-web/imagem3.png" alt="" />
+  </p>
+
+  <p class="texto">
+    <img
+      src="http://files.cod3r.com.br/curso-web/avatar.jpg"
+      align="left"
+      height="50"
+    />
+    text text text text text text text text text text text text text text text
+    text text text text text text text text text text text text text text text
+    text text text text text text text text text
+  </p>
+
+  <p class="cidade"></p>
+
+  <p>
+    <picture>
+      <source
+        srcset="http://files.cod3r.com.br/curso-web/logo-larga.png"
+        media="(min-width:600px)"
+      />
+      <img
+        src="http://files.cod3r.com.br/curso-web/logo-estreita.png"
+        alt="logo"
+      />
+    </picture>
+  </p>
+</div>
+<style>
+  p {
+    display: none;
+    position: absolute;
+  }
+  .circular {
+    width: 513px;
+    background-color: black;
+  }
+
+  .texto {
+    width: 400px;
+  }
+  .texto img {
+    margin-right: 10px;
+  }
+
+  .cidade {
+    width: 513px;
+    height: 342px;
+    background-image: url("http://files.cod3r.com.br/curso-web/imagem4.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 200%;
+  }
+</style>
+
+<script>
+  const images = document.querySelectorAll("[wm-slider]>p");
+  const arrayImages = Array.from(images);
+  function move(elemento, pos, callback) {
+    elemento.style.display = "block";
+    elemento.style.left = pos + "px";
+    arrayImages.indexOf(elemento);
+    if (pos <= 1400) {
+      setTimeout(() => move(elemento, pos + 4, callback), 10);
+    } else callback(elemento);
+  }
+
+  function nextSlide(atual) {
+    if (arrayImages.indexOf(atual) < arrayImages.length - 1) {
+      console.log(arrayImages.indexOf(atual) + 1 + "next slide");
+      move(arrayImages[arrayImages.indexOf(atual) + 1], 0, nextSlide);
+    } else move(arrayImages[0], 0, nextSlide);
+  }
+
+  move(arrayImages[0], 0, nextSlide);
+</script>
