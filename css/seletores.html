@@ -1,44 +1,81 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>CSS Selectors</title>
-    <link rel="stylesheet" href="css/tag.css">
+    <link rel="stylesheet" href="css/tag.css" />
     <style>
-        /* ... */
-    </style>
-</head>
+      /*Global selector*/
+      * {
+        color: yellow;
+        background-color: pink;
+      }
+      /*class - use dot*/
+      .tag {
+        color: blue;
+        background-color: black;
+      }
+      /*ID use #*/
+      #aprovados {
+        color: white;
+        background-color: red;
+      }
+      /*ID and child*/
+      #aninhado > div {
+        color: black;
+        background-color: green;
+      }
 
-<body>
-    <div class='tag'>
-        <div class='tag'>
-            <p class='tag'>1</p>
-            <ul class='tag' feira='casa'>
-                <li>Arroz</li>
-                <li>Feijão</li>
-            </ul>
-            <ul class='tag' feira='escritorio empresa'>
-                <li>Café</li>
-                <li>Água</li>
-            </ul>
-            <ol id='aprovados' class='tag'>
-                <li>Maria</li>
-                <li>Pedro</li>
-                <li>Ana</li>
-            </ol>
-            <div id='aninhado' class='tag'>
-                <div class="tag">
-                    <section class='tag'>
-                        <span class='tag'>1</span>
-                        <p class='tag'>2</p>
-                        <span class='tag'>3</span>
-                    </section>
-                </div>
-            </div>
+      #aninhado section {
+        color: black;
+        background-color: green;
+      }
+      /*Sibling-adjacentes*/
+      p + ul {
+        color: black;
+        background-color: green;
+      }
+      /*General siblings*/
+      p ~ ol {
+        color: black;
+        background-color: green;
+      }
+      /*Property*/
+      [feira] {
+        color: black;
+        background-color: green;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="tag">
+      <div class="tag">
+        <p class="tag">1</p>
+        <ul class="tag" feira="casa">
+          <li>Arroz</li>
+          <li>Feijão</li>
+        </ul>
+        <ul class="tag" feira="escritorio empresa">
+          <li>Café</li>
+          <li>Água</li>
+        </ul>
+        <ol id="aprovados" class="tag">
+          <li>Maria</li>
+          <li>Pedro</li>
+          <li>Ana</li>
+        </ol>
+        <div id="aninhado" class="tag">
+          <div class="tag">
+            <section class="tag">
+              <span class="tag">1</span>
+              <p class="tag">2</p>
+              <span class="tag">3</span>
+            </section>
+          </div>
         </div>
+      </div>
     </div>
     <script src="js/tag.js"></script>
-</body>
-
+  </body>
 </html>
