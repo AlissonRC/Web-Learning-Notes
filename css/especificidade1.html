@@ -1,16 +1,29 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>Especificidade CSS</title>
     <style>
-        /* https://developer.mozilla.org/pt-BR/docs/Web/CSS/Specificity */
+      /* https://developer.mozilla.org/pt-BR/docs/Web/CSS/Specificity */
+      /* class selector is more specific than element selector */
+      /* !important - The most specific */
+      .observacao {
+        background-color: tomato;
+        border: dashed 5px;
+        padding: 20px;
+        font-size: 20px;
+      }
+      /* More specific  */
+      p.observacao {
+        background-color: blue;
+      }
+      p {
+        background-color: teal;
+      }
     </style>
-</head>
+  </head>
 
-<body>
-    <p class='observacao'>Olha essa observação!!!!</p>
-</body>
-
+  <body>
+    <p class="observacao">Olha essa observação!!!!</p>
+  </body>
 </html>

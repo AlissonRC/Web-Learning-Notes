@@ -40,10 +40,27 @@
         color: black;
         background-color: green;
       }
-      /*Property*/
+      /* Property */
+      /* [feira=casa] */
+      /* [feira*=casa] */
       [feira] {
         color: black;
         background-color: green;
+      }
+      /* First child */
+      span:nth-child(1) {
+        color: blue;
+        background-color: blueviolet;
+      }
+      /* just odd childs, can be use "even" */
+      section > :nth-child(odd) {
+        color: yellow;
+        background-color: tomato;
+      }
+      /* second child of a section that is a span */
+      section > span:nth-of-type(2) {
+        color: thistle;
+        background-color: tomato;
       }
     </style>
   </head>
@@ -61,6 +78,11 @@
           <li>Água</li>
         </ul>
         <ol id="aprovados" class="tag">
+          <li>Maria</li>
+          <li>Pedro</li>
+          <li>Ana</li>
+        </ol>
+        <ol class="tag">
           <li>Maria</li>
           <li>Pedro</li>
           <li>Ana</li>
