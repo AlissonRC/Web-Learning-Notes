@@ -1,26 +1,70 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>Position</title>
     <style>
-        /* ... */
+      div {
+        font-size: 60px;
+        padding: 30px;
+        border: solid 5px black;
+      }
+      .static {
+        top: 100px; /*wont bee applied*/
+        left: 100px; /*wont bee applied*/
+        background-color: blueviolet;
+      }
+      .fixed {
+        position: fixed;
+        bottom: 0px;
+        right: 0px;
+        background-color: red;
+      }
+      .relative1 {
+        /* will consider only the previous element */
+        position: relative;
+        left: 5px;
+        top: 5px;
+        background-color: royalblue;
+      }
+      .absolute1 {
+        position: absolute;
+        left: 500px;
+        top: 100px;
+        background-color: saddlebrown;
+      }
+      .relative2 {
+        position: relative;
+        top: 2000px;
+        left: 250px;
+        width: 200px;
+        height: 200px;
+        background-color: salmon;
+      }
+      .absolute2 {
+        position: absolute;
+        background-color: seagreen;
+      }
+      .sticky {
+        position: -webkit-sticky;
+        position: sticky;
+        background-color: tomato;
+        top: 0px;
+      }
     </style>
-</head>
+  </head>
 
-<body>
+  <body>
     <div class="static">Static (Padrão)</div>
     <div class="fixed">Fixed</div>
     <div class="relative1">Relative</div>
     <div class="absolute1">Absolute</div>
 
     <div class="relative2">
-        <div class="absolute2"></div>
+      <div class="absolute2"></div>
     </div>
 
     <div class="sticky">Sticky</div>
     <p style="padding-bottom: 2000px;">Opa</p>
-</body>
-
+  </body>
 </html>

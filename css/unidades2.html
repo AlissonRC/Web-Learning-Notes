@@ -1,15 +1,30 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>Unidades #02</title>
     <style>
-        /* ... */
+      .fora {
+        position: relative;
+        background-color: blue;
+        width: 400px;
+        height: 400px;
+        padding: 50px;
+      }
+      .dentro {
+        background-color: red;
+        width: 100%;
+        height: 100px;
+        position: static; /* content*/
+        position: relative; /* content*/
+        position: absolute; /* content*/
+        position: fixed; /* viewport*/
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <div class="fora">
-        <div class="dentro"></div>
+      <div class="dentro"></div>
     </div>
-</body>
+  </body>
 </html>
