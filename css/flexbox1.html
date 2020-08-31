@@ -10,8 +10,32 @@
       }
 
       .flex-container {
-        display: flex;
-        flex-direction: column;
+        display: flex; /*default direction is flex-direction row*/
+        flex-direction: column; /*will display flex items in column*/
+        flex-direction: column-reverse; /*will display flex items in column but in reverse order*/
+        flex-direction: row-reverse; /*will display flex items in row but reverse order*/
+        flex-direction: row;
+        width: 50%;
+        height: 200px;
+        flex-wrap: wrap; /*will wrap the flex items*/
+        flex-flow: row-reverse wrap;
+        /* Mains axis */
+        justify-content: flex-start;
+        justify-content: flex-end;
+        justify-content: center;
+        justify-content: space-around;
+        justify-content: space-between;
+        /* cross axis */
+        height: 400px;
+        align-items: stretch;
+        align-items: baseline;
+        align-items: flex-start;
+        align-items: flex-end;
+        align-items: center;
+        /* More than one line */
+        align-content: flex-start;
+        align-content: flex-end;
+        align-content: center;
       }
     </style>
   </head>
