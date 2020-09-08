@@ -1,17 +1,29 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-    <meta charset='UTF-8'>
+  <head>
+    <meta charset="UTF-8" />
     <title>Trabalhando com Eventos #01</title>
-    <link rel='stylesheet' href='css/estilo.css'>
-</head>
+    <link rel="stylesheet" href="css/estilo.css" />
+  </head>
 
-<body class="conteudo exercicio">
+  <body class="conteudo exercicio">
     <div>
-        <a href="https://google.com.br">Google</a>
+      <a secondsToLoad href="https://google.com.br">Google</a>
+      <!-- onclick="secondsToLoad(event)" -->
     </div>
     <script>
-        // ...
+      //   const a = document.querySelector("a");
+      //   a.onclick = secondsToLoad;
+      const a = document.querySelector("[secondsToLoad]");
+      a.onclick = secondsToLoad;
+      function secondsToLoad(e) {
+        e.preventDefault();
+        console.log("5seconds");
+        setTimeout(() => {
+          const link = e.target;
+          window.location.href = link.href;
+        }, 5000);
+      }
     </script>
-</body>
+  </body>
+</html>

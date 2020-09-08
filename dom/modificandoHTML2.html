@@ -1,19 +1,29 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-    <meta charset='UTF-8'>
+  <head>
+    <meta charset="UTF-8" />
     <title>Modificando HTML #02</title>
-    <link rel='stylesheet' href='css/estilo.css'>
-</head>
+    <link rel="stylesheet" href="css/estilo.css" />
+  </head>
 
-<body class='conteudo exercicio'>
+  <body class="conteudo exercicio">
     <div>
-        <p>Texto Inicial</p>
+      <p>Texto Inicial</p>
     </div>
     <script>
-        // ...
-    </script>
-</body>
+      const div = document.querySelector("div");
 
+      //   div.innerHTML += "<div id='div1' class='destaque'>Test</div>";
+      //   const div1 = document.getElementById("div1");
+      //   div1.outerHTML = "<div>text 2</div>";
+      //   div1.insertAdjacentHTML("afterbegin", "<p>Before Begin</p>");
+      //   console.log(div1);
+      div.insertAdjacentHTML("beforebegin", "<p>Before Begin</p>");
+      div.insertAdjacentHTML("afterbegin", "<p>after Begin</p>");
+      div.insertAdjacentHTML("beforeend", "<p>before end</p>");
+      div.insertAdjacentHTML("afterend", "<p>after end</p>");
+
+      console.log(div.innerText);
+    </script>
+  </body>
 </html>

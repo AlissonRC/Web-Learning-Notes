@@ -1,0 +1,47 @@
+* {
+  box-sizing: border-box;
+}
+div[wm-flappy] {
+  background-color: deepskyblue;
+
+  position: relative;
+  align-items: center;
+  border: 5px solid dodgerblue;
+  margin: 15px;
+  width: 1200px;
+  height: 700px;
+  overflow: hidden;
+}
+.bird {
+  position: absolute;
+  width: 60px;
+  left: calc(50% - 30px);
+}
+.pipes {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.pipe {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.pipe .pipeBody {
+  width: 110px;
+  height: 40px;
+  border-right: solid black 2px;
+  border-left: solid black 2px;
+  background: linear-gradient(90deg, #639301, #a5e82e);
+}
+.pipe .pipeBorder {
+  width: 130px;
+  height: 30px;
+  background: linear-gradient(90deg, #639301, #a5e82e);
+  border: solid black 2px;
+}
